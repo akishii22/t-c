@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Our Cute Love Contract 💖</title>
+  <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Quicksand:400,700" rel="stylesheet" />
+  <style>
+    html, body {
+      margin: 0; padding: 0;
+      height: auto; /* Allow auto height for scrolling */
+      overflow-y: auto; /* Enable vertical scrolling */
+      background: linear-gradient(120deg, #ffd6e0 0%, #ffb6c1 35%, #ffc3a0 100%);
+      font-family: 'Quicksand', Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    body {
+      max-width: 750px;
+      margin: 30px auto;
+      border-radius: 30px;
+      box-shadow: 0 10px 38px rgba(249, 11, 112, 0.15);
+      padding: 25px 10px 60px 10px;
+      position: relative;
+      overflow: visible; /* Important: allow body overflow */
+      min-height: auto; /* Remove fixed min-height */
+      box-sizing: border-box;
+      background-clip: padding-box;
+    }
+    h2 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2.5em;
+      text-align: center;
+      color: #df1a62;
+      margin-bottom: 15px;
+      user-select: none;
+    }
+    ul {
+      background: #fff4f9;
+      border-radius: 18px;
+      padding: 24px 20px 16px 38px;
+      margin-bottom: 26px;
+      border: 2px solid #ffb7c5;
+      box-shadow: 0 2px 10px rgba(255, 122, 146, 0.05);
+      font-size: 1.09em;
+      user-select: none;
+    }
+    ul li {
+      margin-bottom: 13px;
+      line-height: 1.52;
+      position: relative;
+      padding-left: 32px;
+      font-size: 1.11em;
+      font-weight: 600;
+    }
+    ul li:before {
+      content: "❤️";
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-size: 1.1em;
+      animation: bounce 0.8s infinite alternate;
+      user-select: none;
+    }
+    @keyframes bounce {
+      to {
+        transform: translateY(-5px);
+      }
+    }
+    .important {
+      color: #d41a4a;
+      font-weight: bold;
+      user-select: none;
+    }
+    .romantic-quote {
+      display: block;
+      text-align: center;
+      font-size: 1.14em;
+      color: #ff4992;
+      margin: 15px 0 14px 0;
+      font-family: 'Great Vibes', cursive;
+      letter-spacing: 0.4px;
+      font-style: italic;
+      user-select: none;
+    }
+    label {
+      font-weight: bold;
+      color: #ae3b7b;
+      font-size: 1.1em;
+      user-select: none;
+    }
+    input[type="text"] {
+      border-radius: 8px;
+      padding: 9px 14px;
+      width: 63%;
+      border: 1.5px solid #ff90b3;
+      margin-bottom: 10px;
+      font-size: 1.05em;
+      background: #fff5f8;
+      font-family: 'Quicksand', Arial, sans-serif;
+      box-sizing: border-box;
+    }
+    .signature-pad {
+      border: 2.2px dashed #df1a62;
+      width: 100%;
+      height: 110px;
+      background: #fff;
+      border-radius: 9px;
+      margin-bottom: 10px;
+      box-shadow: 0 4px 18px rgba(230, 50, 140, 0.05);
+      cursor: pointer;
+      transition: box-shadow 0.22s;
+      touch-action: none;
+    }
+    .signature-pad:hover {
+      box-shadow: 0 10px 50px rgba(243, 69, 154, 0.14);
+      border-color: #ff386c;
+    }
+    button {
+      background: linear-gradient(90deg, #ff80b3 0%, #e21845 100%);
+      color: #fff;
+      border: none;
+      padding: 12px 27px;
+      border-radius: 19px;
+      cursor: pointer;
+      font-family: 'Quicksand', Arial, sans-serif;
+      font-size: 1.12em;
+      box-shadow: 0 2px 20px rgba(206, 90, 160, 0.08);
+      transition: background 0.18s, transform 0.13s;
+      margin: 12px 5px 0 0;
+      letter-spacing: 0.03em;
+      font-weight: bold;
+      user-select: none;
+    }
+    button:hover {
+      background: linear-gradient(90deg, #e21845 0%, #ff6696 100%);
+      transform: scale(1.04);
+      opacity: 0.97;
+    }
+    #status {
+      margin-top: 18px;
+      font-weight: bold;
+      color: #d41a4a;
+      font-size: 1.11em;
+      user-select: none;
+    }
+    @media (max-width: 800px) {
+      body {
+        margin: 4px;
+        padding: 10px 8px 45px 8px;
+      }
+      input[type="text"] {
+        width: 100%;
+        font-size: 1em;
+      }
+    }
+
+    /* Hearts animation container */
+    .hearts {
+      pointer-events: none;
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 0;
+      overflow: visible;
+    }
+    .heart {
+      position: absolute;
+      width: 28px;
+      height: 28px;
+      font-size: 29px;
+      animation: floatHearts 6s linear infinite;
+      opacity: 0.42;
+      filter: drop-shadow(2px 8px 1px #ffd6e0);
+      user-select: none;
+    }
+    @keyframes floatHearts {
+      from {
+        transform: translateY(90vh) scale(0.8);
+      }
+      to {
+        transform: translateY(-10vh) scale(1.2);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="hearts" aria-hidden="true"></div>
+
+  <h2>Our Cute Love Contract 💝</h2>
+  <span class="romantic-quote">"Love isn't about how many days, months, or years—you make every moment special just by being you."</span>
+
+  <ul>
+    <li class="important">You will address me sweetly, nicely, and lovingly—with full respect—always.</li>
+    <li class="important">When I say something or make a demand, I expect you to listen and not say no—be attentive, not dismissive!</li>
+    <li class="important">You should “baby” me and naturally know how a boyfriend keeps his girlfriend happy. I shouldn’t have to explain how! Use your own brain!</li>
+    <li>Honesty: Always talk openly and truthfully—no secrets or hidden feelings.</li>
+    <li>Respect: Mutual respect for each other’s beliefs, boundaries, and opinions is a must.</li>
+    <li>Loyalty: 100% commitment—no cheating, lies, or shady behavior.</li>
+    <li>Support: Stand by me in tough times, and genuinely celebrate every achievement, big or small.</li>
+    <li>Quality Time: Make time for me, even when things get hectic.</li>
+    <li>Personal Space: Respect my need for alone time and privacy—no drama.</li>
+    <li>Conflict Resolution: Solve problems maturely and NEVER with insults or blame games.</li>
+    <li>Growth: Support each other’s dreams and ambitions.</li>
+    <li>Fun: Keep things romantic, exciting, and filled with humor and good vibes.</li>
+    <li>No name-calling or emotional manipulation—ZERO tolerance.</li>
+  </ul>
+
+  <div class="romantic-quote">"Promise to love, respect, and make each other smile forever. Now, your signature please... 💌"</div>
+
+  <form onsubmit="return false" aria-label="Love contract form">
+    <label for="name">Your Name:</label><br />
+    <input
+      type="text"
+      id="name"
+      name="name"
+      placeholder="Type your name..."
+      autocomplete="off"
+      required
+      aria-required="true"
+      aria-describedby="nameHelp"
+    />
+    <div id="nameHelp" style="font-size: 0.9em; margin-bottom: 15px; color:#ae3b7b;">
+      This confirms your love 💖
+    </div>
+
+    <label for="signature">Signature (with love):</label><br />
+    <canvas id="signature" class="signature-pad" aria-label="Signature pad"></canvas><br />
+
+    <button type="button" id="clear">Clear Signature</button>
+    <button type="button" id="save">I Promise! 💞</button>
+
+    <div id="status" role="alert" aria-live="polite"></div>
+  </form>
+
+  <p
+    style="
+      text-align: center;
+      color: #c71a4d;
+      font-size: 1.15em;
+      margin: 25px 0 0 0;
+      user-select: none;
+    "
+  >
+    <strong
+      >Once you sign, save the agreement and share it with me on WhatsApp, Instagram
+      DM, or any way you like.<br />
+      It's our sweet digital memory! 💕</strong
+    >
+  </p>
+
+  <script>
+    // Floating hearts animation
+    (function () {
+      const heartsContainer = document.querySelector(".hearts");
+      const heartOptions = ["💖", "💗", "❤️", "💕", "💓", "💞", "💘"];
+      const heartColors = [
+        "#ff335f",
+        "#ffb7c5",
+        "#ff5778",
+        "#a51c5e",
+        "#fff1f6",
+        "#fd6689",
+        "#e21845",
+        "#ff96a7",
+      ];
+
+      for (let i = 0; i < 30; i++) {
+        const h = document.createElement("span");
+        h.className = "heart";
+        h.textContent = heartOptions[Math.floor(Math.random() * heartOptions.length)];
+        h.style.left = Math.random() * 98 + "vw";
+        h.style.top = Math.random() * 90 + 4 + "vh";
+        h.style.color = heartColors[Math.floor(Math.random() * heartColors.length)];
+        h.style.fontSize = 22 + Math.random() * 20 + "px";
+        h.style.animationDuration = 3 + Math.random() * 3 + "s";
+        h.style.opacity = 0.32 + Math.random() * 0.32;
+        heartsContainer.appendChild(h);
+      }
+    })();
+
+    // Signature pad setup
+    const canvas = document.getElementById("signature");
+    const ctx = canvas.getContext("2d");
+    let drawing = false,
+      started = false;
+
+    function resizeCanvas() {
+      const scale = window.devicePixelRatio;
+      canvas.width = canvas.offsetWidth * scale;
+      canvas.height = canvas.offsetHeight * scale;
+      ctx.setTransform(1, 0, 0, 1, 0, 0);
+      ctx.scale(scale, scale);
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+    }
+    resizeCanvas();
+    window.addEventListener("resize", resizeCanvas);
+
+    function getXY(e) {
+      const rect = canvas.getBoundingClientRect();
+      let x, y;
+      if (e.touches) {
+        x = e.touches[0].clientX - rect.left;
+        y = e.touches[0].clientY - rect.top;
+      } else {
+        x = e.clientX - rect.left;
+        y = e.clientY - rect.top;
+      }
+      return { x, y };
+    }
+
+    function startDraw(e) {
+      drawing = true;
+      started = true;
+      ctx.beginPath();
+    }
+    function endDraw() {
+      drawing = false;
+      ctx.beginPath();
+    }
+    function draw(e) {
+      if (!drawing) return;
+      e.preventDefault && e.preventDefault();
+      let { x, y } = getXY(e);
+      ctx.lineWidth = 2.4;
+      ctx.lineCap = "round";
+      ctx.strokeStyle = "#df1a62";
+      ctx.lineTo(x, y);
+      ctx.stroke();
+      ctx.beginPath();
+      ctx.moveTo(x, y);
+    }
+
+    // Mouse events
+    canvas.addEventListener("mousedown", startDraw);
+    canvas.addEventListener("mouseup", endDraw);
+    canvas.addEventListener("mouseleave", endDraw);
+    canvas.addEventListener("mousemove", draw);
+    // Touch events
+    canvas.addEventListener("touchstart", startDraw);
+    canvas.addEventListener("touchend", endDraw);
+    canvas.addEventListener("touchcancel", endDraw);
+    canvas.addEventListener("touchmove", draw);
+
+    // Clear button
+    document.getElementById("clear").onclick = function () {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      started = false;
+      document.getElementById("status").textContent = "";
+    };
+
+    // Save button
+    document.getElementById("save").onclick = function () {
+      const name = document.getElementById("name").value.trim();
+      const statusEl = document.getElementById("status");
+
+      if (!name) {
+        statusEl.textContent = "Please enter your name!";
+        return;
+      }
+      if (!started) {
+        statusEl.textContent = "Please provide your signature!";
+        return;
+      }
+
+      let imgData = canvas.toDataURL();
+
+      // Show download link + thank you message
+      statusEl.innerHTML =
+        `Thank you, <b style="color:#e21845">${name}</b>! 💗<br>` +
+        `Click <a href="${imgData}" download="Signed-BF-Love-Agreement.png" ` +
+        `style="color:#e21845;text-decoration:underline;font-weight:bold;">here</a> to save your signed contract.<br>` +
+        `<i>Now please send it to me on WhatsApp, Insta DM, or email! 🥰</i>`;
+    };
+  </script>
+</body>
+</html>
